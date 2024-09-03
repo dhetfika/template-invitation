@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+body{
+    background-color: #1B1B1B;
+    color: white;
+    font-family: "Nunito", sans-serif;
+    overflow: auto;
+    scroll-behavior: smooth;
+    font-size: 12px;
+}
+
+body::-webkit-scrollbar {
+    display: none; /* Untuk Chrome, Safari, dan Edge */
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style-type: none;
+}
+
+.modal-content {
+    background-color: transparent;
+    border: none;
+}
+
+.cover {
+    height: 100vh;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+  
+.fixed-menu-wrapper {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto; /* Agar menyesuaikan dengan lebar kontainer di dalamnya */
+    max-width: 100%; /* Menjamin menu tidak melebihi lebar viewport */
+    background-color: #720000;
+    padding: 20px 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 999; /* Pastikan menu berada di atas konten lainnya */
+    border-radius: 10px;
+}
+
+.fixed-menu-wrapper .container {
+    max-width: 100%; /* Menyesuaikan lebar dengan container */
+    width: 100%; /* Lebar 100% dari wrapper */
+    padding: 0 15px; /* Memberi padding jika diperlukan */
+}
+
+.fixed-menu-wrapper .menu-items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Menggunakan flexbox untuk tata letak horizontal */
+    justify-content: space-between; /* Menyebar item dengan jarak yang merata */
+    gap: 1.2rem; /* Sesuaikan gap jika perlu, bisa menggunakan gap-4 atau gap-2 */
+}
+
+.fixed-menu-wrapper .menu-items li {
+    text-align: center;
+    flex: 1;
+}
+
+.fixed-menu-wrapper .menu-items a {
+    text-decoration: none;
+    padding: 5px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column; /* Menata ikon dan teks secara vertikal */
+    align-items: center; /* Menyelaraskan ikon dan teks ke tengah */
+}
+
+.fixed-menu-wrapper .menu-items a:hover {
+    background-color: #BE3232;
+    border-radius: 10px;
+}
+
+.fixed-menu-wrapper .menu-items li.active{
+    background-color: #BE3232;
+    border-radius: 10px;
+}
+
+
+@media(max-width: 768px){
+    .fixed-menu-wrapper{
+        width: 100%
+    }
+
+    .fixed-menu-wrapper .menu-items {
+        gap: .2rem; /* Sesuaikan gap jika perlu, bisa menggunakan gap-4 atau gap-2 */
+    }
+
+    .fixed-menu-wrapper .menu-items a {
+        font-size: 10px;
+    }
+}
+
+  
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center, transparent 30%, rgba(0, 0, 0, 0.4) 70%);
+    z-index: 1;
+}
+
+.cover-content {
+    position: relative;
+    z-index: 2;
+}
+
+.cover-content-title p{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.cover-content-title h3{
+    font-family: "Marck Script", cursive;
+    font-size: 2.5rem;
+}
+
+.invitation-content {
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 70%;
+    border-radius: 15px;
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px); /* Untuk mendukung browser yang lebih lama */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Opsional, untuk memberikan batasan tipis */
+}
+
+
+.invitation-content a{
+    background-color: #9E2626;
+    color: white;
+    font-size: 12px;
+}
+
+.cover .item-image-1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+}
+.cover .item-image-2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+}
+
+/* salam */
+
+.salam-content{
+    z-index: 5;
+}
+
+.salam-content h3{
+    font-family: "Marck Script", cursive;
+    font-size: 1.5rem;
+}
+
+.salam-content p{
+    font-family: "Montserrat", system-ui;
+}
+
+/* mempelai-content */
+
+.mempelai-content{
+    color: #5E0000;
+    font-family: "Nunito Sans", system-ui;
+}
+
+.mempelai-image{
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    background-color: #5E0000;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.mempelai-content h3{
+    font-family: "Marck Script", cursive;
+    font-size: 1.5rem;
+}
+
+/* acara */
+.acara-content{
+    color: #5E0000;
+    font-family: "Nunito Sans", system-ui;
+}
+
+.acara-content span{
+    font-family: "Montserrat", system-ui;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* gallery */
+.gallery-content{
+    color: #5E0000;
+    font-family: "Nunito Sans", system-ui;
+}
+
+/* rsvp */
+.rsvp-content{
+    color: #5E0000;
+    font-family: "Nunito Sans", system-ui;
+}
+
+.rsvp-content h3{
+    font-family: "Marck Script", cursive;
+    font-size: 2rem;
+}
+
+.rsvp-content a{
+    background-color: #9E2626;
+    color: white;
+    font-size: 12px;
+}
+
+/* hadiah */
+.hadiah-content{
+    color: #5E0000;
+    font-family: "Nunito Sans", system-ui;
+}
+
+.hadiah-content h3{
+    font-family: "Marck Script", cursive;
+    font-size: 2rem;
+}
+
+.gift-content{
+    width: 70%;
+    height: 150px;
+    background-color: #9E2626;
+    border-radius: 15px;
+}
+
+/* close */
+.close-content{
+    color: #5E0000;
+    font-family: "Nunito Sans", system-ui;
+}
+
+.close-content h3{
+    font-family: "Marck Script", cursive;
+    font-size: 2rem;
+}
+
+
+
+
