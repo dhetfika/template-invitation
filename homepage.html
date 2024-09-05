@@ -11,17 +11,19 @@
 <body class="poppins">
     <!-- NAVBAR -->
     <nav class="w-full h-20 shadow-md ">
-        <div class="w-4/5 mx-auto h-20 flex justify-between items-center">
-            <div class="flex items-center">
-                <img src="asset/img/undangan-v2/Circle.png" width="64" alt="" srcset="">
+        <div class="hidden lg:w-4/5 lg:mx-auto lg:h-20 lg:flex lg:justify-between lg:items-center">
                 Logo
-            </div>
-            <ul class="flex gap-6 items-center font-semibold">
-                <li class="p-3 active-menu"><a href="homepage.html">Home</a></li>
-                <li class="p-3"><a href="tema.html">Tema</a></li>
-                <li class="p-3"><a href="paket.html">Paket</a></li>
-                <li class="bg-coklat px-3 py-2 text-white rounded-full"><a href="">Pesan Sekarang</a></li>
+            <ul class="lg:flex lg:gap-6 lg:items-center lg:font-semibold">
+                <li class="lg:p-3 active-menu"><a href="homepage.html">Home</a></li>
+                <li class="lg:p-3"><a href="tema.html">Tema</a></li>
+                <li class="lg:p-3"><a href="paket.html">Paket</a></li>
+                <li class="bg-coklat lg:px-3 lg:py-2 lg:text-white lg:rounded-full"><a href="">Pesan Sekarang</a></li>
             </ul>
+        </div>
+        <!-- Mobile -->
+        <div class="flex items-center w-4/5 mx-auto h-20 justify-between lg:hidden">
+            <p>Logo</p>
+            <button class="text-4xl" type="button"><i class="fa-solid fa-bars"></i></button>
         </div>
     </nav>
     <!-- END NAVBAR -->
@@ -29,20 +31,20 @@
     <!-- CONTENT -->
     <main class="w-full pt-12">
         <!-- SECTION 1 -->
-        <div class="w-4/5 mx-auto flex items-center mb-16">
-            <div class="w-1/2">
-                <img src="asset/img/undangan-v2/c0f0b86991146e7a5084987e7f82c3e6.jpeg" class="w-full" alt="">
+        <div class="flex-col w-4/5 mx-auto flex lg:flex-row lg:items-center mb-16">
+            <div class="w-full lg:w-1/2">
+                <img src="asset/img/Frame 100.png" class="w-full" alt="">
             </div>
-            <div class="w-1/2">
-                <div class="w-4/5 ms-auto">
-                    <h3 class="font-semibold text-4xl mb-6">Rayakan Momen Spesial dengan Undangan Digital yang Berkesan.</h3>
+            <div class="w-full lg:w-1/2">
+                <div class="w-full pt-6 lg:w-11/12 xl:w-4/5 lg:ms-auto">
+                    <h3 class="font-semibold text-2xl lg:text-4xl mb-6">Rayakan Momen Spesial dengan Undangan Digital yang Berkesan.</h3>
                     <p class="text-base mb-6">Kirim kabar gembira lebih mudah dengan undangan digital yang dapat disesuaikan untuk acara apapun—cepat, praktis, dan ramah lingkungan.</p>
                     <div class="grid grid-cols-2">
-                        <div class="flex justify-center">
-                            <button class="bg-coklat w-4/5 py-2 rounded-lg text-white"><a href=""><i class="fa-solid fa-cart-shopping"></i> Pesan Sekarang</a></button>
+                        <div class="flex gap-3">
+                            <button class="bg-coklat text-xs w-11/12 xl:w-4/5 lg:text-base py-2 rounded-lg text-white"><a href=""><i class="fa-solid fa-cart-shopping"></i> Pesan Sekarang</a></button>
                         </div>
-                        <div class="flex">
-                            <button class="border-coklat w-4/5 py-2 rounded-lg text-coklat"><a href=""><i class="fa-solid fa-cart-shopping"></i> Lihat Tema</a></button>
+                        <div class="flex gap-3">
+                            <button class="border-coklat text-xs w-11/12 xl:w-4/5 lg:text-base py-2 rounded-lg text-coklat"><a href=""><i class="fa-solid fa-cart-shopping"></i> Lihat Tema</a></button>
                         </div>
                     </div>
                 </div>
@@ -52,20 +54,20 @@
 
         <!-- SECTION 2 -->
         <div class="w-full bg-semu-kuning ">
-            <div class="w-4/5 mx-auto grid grid-cols-4 text-center text-coklat content-center items-center h-44">
-                <div class="w-4/5">
+            <div class="w-4/5 mx-auto py-8 grid md:grid-cols-2 lg:grid-cols-4 text-center text-coklat lg:content-center lg:items-center lg:h-44">
+                <div class="w-4/5 mx-auto mb-8 lg:mb-0">
                     <p class="font-semibold">Desain Mudah</p>
                     <span class="text-sm">Sesuaikan desain undangan dengan tema acara Anda dengan cepat dan mudah.</span>
                 </div>
-                <div class="w-4/5">
+                <div class="w-4/5 mx-auto mb-8 lg:mb-0">
                     <p class="font-semibold">Akses Tanpa Batas</p>
                     <span class="text-sm">Tamu dapat mengakses undangan dari perangkat apa pun, kapan saja.</span>
                 </div>
-                <div class="w-4/5">
+                <div class="w-4/5 mx-auto mb-8 lg:mb-0">
                     <p class="font-semibold">Pengelolaan Mudah</p>
                     <span class="text-sm">Kelola semua undangan dan konfirmasi kehadiran dalam satu platform yang efisien.</span>
                 </div>
-                <div class="w-4/5">
+                <div class="w-4/5 mx-auto mb-8 lg:mb-0">
                     <p class="font-semibold">Pembaruan Instan</p>
                     <span class="text-sm">Update undangan secara langsung dan beri tahu semua tamu tanpa perlu mencetak ulang.</span>
                 </div>
@@ -76,31 +78,31 @@
         <!-- SECTION 3 -->
         <div class="w-full">
             <div class="w-4/5 mx-auto">
-                <div class="flex py-24">
-                    <div class="w-1/2 pt-20">
+                <div class="flex flex-col xl:flex-row lg:py-24">
+                    <div class="w-full xl:w-1/2 pt-20 mb-16">
                         <div class="w-4/5 mr-auto">
                             <h3 class="font-semibold text-3xl mb-6">Keunggulan Undangan Digital untuk Acara Anda</h3>
                             <span class="text-sm">Undangan digital memungkinkan Anda menyesuaikan desain dengan tema acara secara fleksibel dan mudah melakukan perubahan. Edit elemen desain dan kirim pembaruan instan, memastikan semua tamu mendapatkan informasi terbaru tanpa perlu mencetak ulang.</span>
                             <button class="bg-coklat block mt-6 py-2 px-3 rounded-lg text-white"><a href=""><i class="fa-solid fa-cart-shopping"></i> Pesan Sekarang</a></button>
                         </div>
                     </div>
-                    <div class="w-1/2 grid grid-cols-2 grid-rows-2 gap-y-4">
-                        <div class="w-72 h-72 bg-kuning-gold text-white p-6 rounded-3xl -rotate-3">
+                    <div class="w-full xl:w-1/2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 lg:grid-rows-2 gap-y-4">
+                        <div class="w-72 h-72 mx-auto bg-kuning-gold text-white p-6 rounded-3xl -rotate-3">
                             <i class="fa-solid fa-clock-rotate-left text-4xl mb-3"></i>
                             <p class="text-sm mb-4 font-semibold">Hemat Waktu</p>
                             <span class="text-sm">Undangan digital memungkinkan Anda mengirimkan undangan ke banyak tamu dalam hitungan detik. Tidak perlu repot dengan pengiriman fisik.</span>
                         </div>
-                        <div class="w-72 h-72 bg-hitam-muda text-white p-6 rounded-3xl">
+                        <div class="w-72 h-72 mx-auto bg-hitam-muda text-white p-6 rounded-3xl">
                             <i class="fa-solid fa-money-bill-wave text-4xl mb-3"></i>
                             <p class="text-sm mb-4 font-semibold">Biaya Terjangkau</p>
                             <span class="text-sm">Kurangi biaya pengiriman dan cetak dengan undangan digital. Pilihan hemat untuk acara besar tanpa mengorbankan kualitas.</span>
                         </div>
-                        <div class="w-72 h-72 bg-hitam-muda text-white p-6 rounded-3xl">
+                        <div class="w-72 h-72 mx-auto bg-hitam-muda text-white p-6 rounded-3xl">
                             <i class="fa-solid fa-screwdriver-wrench text-4xl mb-3"></i>
                             <p class="text-sm mb-4 font-semibold">Pengelolaan Sederhana</p>
                             <span class="text-sm">Kelola daftar tamu, konfirmasi kehadiran, dan kirim pengingat secara otomatis. Semua dalam satu platform yang mudah digunakan.</span>
                         </div>
-                        <div class="w-72 h-72 bg-hitam-muda text-white p-6 rounded-3xl">
+                        <div class="w-72 h-72 mx-auto bg-hitam-muda text-white p-6 rounded-3xl">
                             <i class="fa-solid fa-leaf text-4xl mb-3"></i>
                             <p class="text-sm mb-4 font-semibold">Ramah Lingkungan</p>
                             <span class="text-sm">Kurangi penggunaan kertas dan dampak lingkungan dengan memilih undangan digital. Solusi cerdas untuk acara yang lebih hijau.</span>
@@ -113,40 +115,40 @@
 
         <!-- SECTION 4 -->
         <div class="w-full bg-semu-kuning">
-            <div class="w-4/5 mx-auto text-center py-24">
+            <div class="w-4/5 mx-auto text-center my-24 lg:py-24">
                 <h3 class="font-semibold text-2xl mb-3">Pilihan Tema Unggulan</h3>
                 <p>Jelajahi Beragam Desain Undangan Digital yang Elegan untuk Setiap Acara Anda</p>
 
-                <div class="grid grid-cols-4 mt-12">
-                    <div class="w-64 m-5">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-12">
+                    <div class="sm:w-56  lg:w-44 xl:w-64 mx-auto m-5">
                         <img src="asset/img/Frame 31.png" class="mb-4" alt="">
                         <button class="bg-coklat w-full py-2 rounded-xl text-white"><a href="">Preview Tema</a></button>
                     </div>
-                    <div class="w-64 m-5">
+                    <div class="sm:w-56  lg:w-44 xl:w-64 mx-auto m-5">
                         <img src="asset/img/Frame 31.png" class="mb-4" alt="">
                         <button class="bg-coklat w-full py-2 rounded-xl text-white"><a href="">Preview Tema</a></button>
                     </div>
-                    <div class="w-64 m-5">
+                    <div class="sm:w-56  lg:w-44 xl:w-64 mx-auto m-5">
                         <img src="asset/img/Frame 31.png" class="mb-4" alt="">
                         <button class="bg-coklat w-full py-2 rounded-xl text-white"><a href="">Preview Tema</a></button>
                     </div>
-                    <div class="w-64 m-5">
+                    <div class="sm:w-56  lg:w-44 xl:w-64 mx-auto m-5">
                         <img src="asset/img/Frame 31.png" class="mb-4" alt="">
                         <button class="bg-coklat w-full py-2 rounded-xl text-white"><a href="">Preview Tema</a></button>
                     </div>
-                    <div class="w-64 m-5">
+                    <div class="sm:w-56  lg:w-44 xl:w-64 mx-auto m-5">
                         <img src="asset/img/Frame 31.png" class="mb-4" alt="">
                         <button class="bg-coklat w-full py-2 rounded-xl text-white"><a href="">Preview Tema</a></button>
                     </div>
-                    <div class="w-64 m-5">
+                    <div class="sm:w-56  lg:w-44 xl:w-64 mx-auto m-5">
                         <img src="asset/img/Frame 31.png" class="mb-4" alt="">
                         <button class="bg-coklat w-full py-2 rounded-xl text-white"><a href="">Preview Tema</a></button>
                     </div>
-                    <div class="w-64 m-5">
+                    <div class="sm:w-56  lg:w-44 xl:w-64 mx-auto m-5">
                         <img src="asset/img/Frame 31.png" class="mb-4" alt="">
                         <button class="bg-coklat w-full py-2 rounded-xl text-white"><a href="">Preview Tema</a></button>
                     </div>
-                    <div class="w-64 m-5">
+                    <div class="sm:w-56  lg:w-44 xl:w-64 mx-auto m-5">
                         <img src="asset/img/Frame 31.png" class="mb-4" alt="">
                         <button class="bg-coklat w-full py-2 rounded-xl text-white"><a href="">Preview Tema</a></button>
                     </div>
@@ -159,7 +161,7 @@
 
     <!-- FOOTER -->
     <footer class="w-full bg-coklat p-6">
-        <div class="w-4/5 mx-auto flex justify-between items-center mb-8">
+        <div class="w-4/5 mx-auto flex flex-col gap-10 lg:flex-row lg:justify-between items-center mb-8">
             <ul class="flex gap-4 text-white font-semibold">
                 <li><a href="">Home</a></li>
                 <li><a href="">Tema</a></li>
@@ -167,9 +169,9 @@
             </ul>
             <img src="asset/img/dummy-footer.png" class="w-40" alt="">
             <ul class="flex gap-4">
-                <li class="w-14 h-14 rounded-full bg-semu-kuning flex justify-center items-center"><a  href=""><i class="fa-brands fa-instagram text-2xl text-coklat"></i></a></li>
-                <li class="w-14 h-14 rounded-full bg-semu-kuning flex justify-center items-center"><a  href=""><i class="fa-brands fa-x-twitter text-2xl text-coklat"></i></a></li>
-                <li class="w-14 h-14 rounded-full bg-semu-kuning flex justify-center items-center"><a  href=""><i class="fa-brands fa-facebook text-2xl text-coklat"></i></a></li>
+                <li class="w-10 h-10 lg:w-14 lg:h-14 rounded-full bg-white flex justify-center items-center"><a  href=""><i class="fa-brands fa-instagram text-2xl text-coklat"></i></a></li>
+                <li class="w-10 h-10 lg:w-14 lg:h-14 rounded-full bg-white flex justify-center items-center"><a  href=""><i class="fa-brands fa-x-twitter text-2xl text-coklat"></i></a></li>
+                <li class="w-10 h-10 lg:w-14 lg:h-14 rounded-full bg-white flex justify-center items-center"><a  href=""><i class="fa-brands fa-facebook text-2xl text-coklat"></i></a></li>
             </ul>
         </div>
         <div class="w-full border-t-2 border-t-white p-6 text-center text-white">
