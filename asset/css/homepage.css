@@ -2,6 +2,7 @@
 :root{
     --bg-coklat: #8B4513;
     --bg-semu-kuning: #FFE799;
+    --bg-semu-kuning-v2: #FAF3E0;
     --bg-kuning-gold: #C29C20;
     --bg-hitam-muda: #60605F;
 
@@ -18,6 +19,9 @@
 .bg-semu-kuning{
     background-color: var(--bg-semu-kuning);
 }
+.bg-semu-kuning-v2{
+    background-color: var(--bg-semu-kuning-v2);
+}
 .bg-kuning-gold{
     background-color: var(--bg-kuning-gold);
 }
@@ -26,6 +30,10 @@
 }
 .active-menu{
     border-bottom: 4px solid var(--bg-coklat);
+}
+
+.border-b-coklat{
+    border-bottom: 1px solid rgba(139, 69, 19, 0.5);
 }
 
 .text-coklat{
