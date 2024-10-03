@@ -127,69 +127,72 @@ img.tentang-image{
 }
 
 /* acara */
-.acara-content h3{
-    font-family: "Allura", cursive;
-    font-size: 2rem;
+.acara-content i{
+    font-size: 1.3rem;
 }
 
-.countdown {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 14px;
-    padding: 20px;
-  }
-  
-  .time-box {
-    display: inline-block;
-    text-align: center;
-    padding: 12px;
-    background-color: #c89500; /* Warna latar belakang kotak */
-    border-radius: 10px; /* Radius sudut kotak */
+p.tanggal-acara{
+    color: #FFC147;
+    font-size: 1rem;
+}
+p.jam-acara{
+    font-size: 1rem;
+}
+
+.taggal-pernikahan span{
+    font-size: 1rem;
+}
+
+.acara-content a.btn-lokasi{
+    background-color: #B17500;
     color: white;
-    font-family: "Poppins", sans-serif;
-  }
-  
-  .time {
-    display: block;
-    font-size: 14px;
-    font-weight: bold;
-  }
-  
-  .label {
-    display: block;
     font-size: 12px;
-  }
-
-.acara-content a{
-    background-color: #B17F00;
-    color: white;
-    font-size: 14px;
 }
 
-/* tanda */
-.tanda-content h3{
+a.btn-lokasi i{
+    font-size: 12px;
+}
+
+/* mempelai */
+.mempelai-content h3{
     font-family: "Allura", cursive;
-    font-size: 2rem;
+}
+.mempelai-content p{
+    font-family: "Popins", serif;
 }
 
-.tanda-ucapan{
-    width: 250px;
-    height: 150px;
-    border-radius: 10px;
-    background-color: antiquewhite;
+/* gallery */
+.modal-content {
+    background-color: transparent;
+    border: none;
 }
 
-.tanda-content a{
-    background-color: #B17F00;
-    color: white;
-    font-size: 14px;
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center, transparent 30%, rgba(0, 0, 0, 0.4) 70%);
+    z-index: 1;
 }
+
+.gallery-content h3{
+    font-family: "Allura", cursive;
+
+}
+
+
 
 /* close content */
-.close-content img{
-    width: 200px;
-    border-radius: 50% 50% 0 0;
+.close-content{
+    color: #5E0000;
+    font-family: "Nunito Sans", system-ui;
+}
+
+.close-content h3{
+    font-family: "Allura", cursive;
+    font-size: 2rem;
 }
 
 @media(max-width: 990px){
