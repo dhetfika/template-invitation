@@ -131,31 +131,19 @@ a.btn-lokasi i{
 }
 
 @media(max-width: 990px){
-    .cover .item-image-5{
+    .cover .item-image-1{
         width: 450px;
     }
 }
 
 @media(max-width: 450px){
     .cover .item-image-1{
-        width: 70px;
-    }
-    .cover .item-image-2 {
-        width: 70px;
-    }
-    .cover .item-image-3{
-        width: 70px;
-    }
-    .cover .item-image-4{
-        width: 70px;
-    }
-    .cover .item-image-5{
         width: 330px;
     }
 }
 
 @media(max-width: 330px){
-    .cover .item-image-5{
+    .cover .item-image-1{
         width: 280px;
     }
     .cover-content-title h3{
