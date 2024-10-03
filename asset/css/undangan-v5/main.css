@@ -60,21 +60,6 @@ li{
     width: 100px;
 }
 
-.cover .item-image-6{
-    position: absolute;
-    top: 50%;
-    left: 7px;
-    width: 12px;
-    transform: translate(-50%, -50%);
-}
-.cover .item-image-7{
-    position: absolute;
-    top: 50%;
-    right: -5px;
-    width: 12px;
-    transform: translate(-50%, -50%);
-}
-
 .image-cover-wrapper {
     position: relative;
     display: inline-block; /* Atur sesuai kebutuhan tata letak */
@@ -227,7 +212,7 @@ img.tentang-image{
         width: 70px;
     }
     .cover .item-image-5{
-        width: 330px;
+        width: 70px;
     }
 }
 
