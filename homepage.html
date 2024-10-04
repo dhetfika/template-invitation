@@ -1,252 +1,387 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Undangan</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Platform Kreatif Untuk Undangan Digital - Hadir</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
     <link rel="stylesheet" href="asset/css/homepage.css">
+
+    <!-- font awsome -->
     <script src="https://kit.fontawesome.com/0a267e6f70.js" crossorigin="anonymous"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    </head>
-</head>
-<body class="poppins">
-    <!-- NAVBAR -->
-    <nav x-data="{ open: false }" class="w-full h-20 shadow-md ">
-        <div class="hidden lg:w-4/5 lg:mx-auto lg:h-20 lg:flex lg:justify-between lg:items-center">
-                Logo
-            <ul class="lg:flex lg:gap-6 lg:items-center lg:font-semibold">
-                <li class="lg:p-3 active-menu"><a href="homepage.html">Home</a></li>
-                <li class="lg:p-3"><a href="tema.html">Keunggulan</a></li>
-                <li class="lg:p-3"><a href="paket.html">Bantuan</a></li>
-                <li class="lg:p-3"><a href="paket.html">Preview</a></li>
-                <li class="bg-coklat lg:px-4 lg:py-2 lg:text-white lg:rounded-full"><a href="">Masuk</a></li>
-                <li class="bg-white border-coklat lg:px-4 lg:py-2 text-coklat lg:rounded-full"><a href="">Buat Akun</a></li>
-            </ul>
-        </div>
-        <!-- Mobile -->
-        <div class="flex items-center w-4/5 mx-auto h-20 justify-between lg:hidden">
-            <p>Logo</p>
-            <button @click="open = ! open" class="text-4xl" type="button"><i class="fa-solid fa-bars"></i></button>
-        </div>
-        <div x-show="open" class="fixed w-full bg-white top-0 p-3">
-            <div class="flex justify-between">
-                <span>Logo</span>
-                <button @click="open = ! open"><i class="fa-solid fa-xmark"></i></button>
-            </div>
-            <ul class="mt-6">
-                <li class="mb-3"><a href="homepage.html">Home</a></li>
-                <li class="mb-3"><a href="tema.html">Keunggulan</a></li>
-                <li class="mb-3"><a href="paket.html">Bantuan</a></li>
-                <li class="mb-3"><a href="paket.html">Preview</a></li>
-                <div class="flex gap-3 items-center">
-                    <li class="bg-coklat px-3 py-1 text-white rounded-full"><a href="">Masuk</a></li>
-                    <li class="bg-white px-3 py-1 border-coklat text-coklat rounded-full"><a href="">Buat Akun</a></li>
-                </div>
-            </ul>
-        </div>
-    </nav>
-    <!-- END NAVBAR -->
 
-    <!-- CONTENT -->
-    <main class="w-full pt-12">
-        <!-- SECTION 1 -->
-        <div class="flex-col w-4/5 mx-auto flex lg:flex-row lg:items-center mb-16">
-            <div class="w-full lg:w-1/2">
-                <img src="asset/img/Frame 100.png" class="w-full" alt="">
+    <!-- box icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-white bg-white fixed-top shadow px-3 py-3">
+        <a class="navbar-brand" href="#"><img src="asset/img/cs.png" width="35px" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse px-3" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Beranda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#keunggulan">Keunggulan</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#bantuan">Bantuan</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#tamplate">Tamplate</a>
+            </li>
+            <!-- <li class="nav-item">
+                <a href="#" class="btn btn-outline-pink text-dark">Masuk</a>
+            </li> -->
+          </ul>
+        </div>
+        <div class="auth">
+            <a href="#tamplate" class="btn btn-pink rounded-pill">Coba Tamplate Gratis</a>
+        </div>
+      </nav>
+      
+      <div class="mobile-bottom-nav shadow">
+        <ul class="bottom-nav">
+          <li><a href="#home"><i class="fa-solid fa-house"></i><span>Beranda</span></a></li>
+          <li><a href="#keunggulan"><i class='bx bx-calendar-star'></i><span>Keunggulan</span></a></li>
+          <li><a href="#bantuan"><i class='bx bx-help-circle'></i><span>Bantuan</span></a></li>
+          <li><a href="#tamplate"><i class='bx bx-folder-open'></i></i><span>Tamplate</span></a></li>
+          <li><a href="#tamplate"><i class='bx bx-user'></i><span>Login</span></a></li>
+        </ul>
+      </div>
+
+      <!-- section 1 -->
+        <section id="home" class="hero bg-light text-dark py-5">
+            <div class="container">
+                <div class="row align-items-center gap-4 gap-md-0">
+                    <!-- Image Section -->
+                    <div class="col-lg-6">
+                        <img src="asset/img/Frame 100.png" class="img-fluid" alt="Hero Image">
+                    </div>
+                    <!-- Text Section -->
+                    <div class="col-lg-6 p-3 p-md-5">
+                        <h3 class="fw-bold">Rayakan Momen Spesial dengan Undangan Digital yang Berkesan.</h3>
+                        <p class="py-3">Kirim kabar gembira lebih mudah dengan undangan digital yang dapat disesuaikan untuk acara apapun—cepat, praktis, dan ramah lingkungan.</p>
+                        <a href="#" class="btn btn-pink btn-sm py-2"><i class="fa-solid fa-cart-plus"></i> Pesan Sekarang</a>
+                    </div>
+                </div>
             </div>
-            <div class="w-full lg:w-1/2">
-                <div class="w-full pt-6 lg:w-11/12 xl:w-4/5 lg:ms-auto">
-                    <h3 class="font-semibold text-2xl lg:text-4xl mb-6">Rayakan Momen Spesial dengan Undangan Digital yang Berkesan.</h3>
-                    <p class="text-base mb-6">Kirim kabar gembira lebih mudah dengan undangan digital yang dapat disesuaikan untuk acara apapun—cepat, praktis, dan ramah lingkungan.</p>
-                    <div class="grid grid-cols-2">
-                        <div class="flex gap-3">
-                            <button class="bg-coklat text-xs w-11/12 xl:w-4/5 lg:text-base py-2 rounded-lg text-white"><a href=""><i class="fa-solid fa-cart-shopping"></i> Pesan Sekarang</a></button>
+        </section>
+      <!-- end section 1 -->
+
+      <!-- section 2     -->
+      <div class="container-fluid features-section">
+        <div class="container">
+            <div class="row align-items-stretch">
+                <div class="col-md-3 col-sm-6 feature-box d-flex flex-column">
+                    <i class="fa-solid fa-palette"></i>
+                    <h5 class="feature-title">Desain Mudah</h5>
+                    <p class="feature-description">Sesuaikan desain undangan dengan tema acara Anda dengan cepat dan mudah.</p>
+                </div>
+                <div class="col-md-3 col-sm-6 feature-box d-flex flex-column">
+                    <i class="fa-solid fa-palette"></i>
+                    <h5 class="feature-title">Akses Tanpa Batas</h5>
+                    <p class="feature-description">Tamu dapat mengakses undangan dari perangkat apa pun, kapan saja.</p>
+                </div>
+                <div class="col-md-3 col-sm-6 feature-box d-flex flex-column">
+                    <i class="fa-solid fa-palette"></i>
+                    <h5 class="feature-title">Pengelolaan Mudah</h5>
+                    <p class="feature-description">Kelola semua undangan dan konfirmasi kehadiran dalam satu platform yang efisien.</p>
+                </div>
+                <div class="col-md-3 col-sm-6 feature-box d-flex flex-column">
+                    <i class="fa-solid fa-palette"></i>
+                    <h5 class="feature-title">Pembaruan Instan</h5>
+                    <p class="feature-description">Update undangan secara langsung dan beri tahu semua tamu tanpa perlu mencetak ulang.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+      <!-- end section 2 -->
+
+
+    <!-- section 3 -->
+    <div id="keunggulan" class="container my-5">
+        <div class="row align-items-center">
+            <div class="col-12 col-md-6 text-start mb-4">
+                <h3 class="fw-bold">Keunggulan Undangan Digital untuk Acara Anda</h3>
+                <p class="py-3">Undangan digital memungkinkan Anda menyesuaikan desain dengan tema acara secara fleksibel dan mudah melakukan perubahan. Edit elemen desain dan kirim pembaruan instan, memastikan semua tamu mendapatkan informasi terbaru tanpa perlu mencetak ulang.</p>
+                <a href="#" class="btn btn-pink btn-sm py-2"><i class='bx bx-search-alt'></i> Lihat Tamplate</a>
+            </div>
+          
+            <div class="row col-12 col-md-6 g-3 mx-auto">
+                <div class="col-md-6">
+                    <div class="info-box">
+                        <i class='bx bx-history' ></i>
+                        <h5>Hemat Waktu</h5>
+                        <p>Undangan digital memungkinkan Anda mengirimkan undangan ke banyak tamu dalam hitungan detik. Tidak perlu repot dengan pengiriman fisik.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="info-box">
+                        <i class='bx bx-money'></i>
+                        <h5>Biaya Terjangkau</h5>
+                        <p>Kurangi biaya pengiriman dan cetak dengan undangan digital. Pilihan hemat untuk acara besar tanpa mengorbankan kualitas.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="info-box">
+                        <i class='bx bx-hard-hat'></i>
+                        <h5>Pengelolaan Sederhana</h5>
+                        <p>Kelola daftar tamu, konfirmasi kehadiran, dan kirim pengingat secara otomatis. Semua dalam satu platform yang mudah digunakan.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="info-box">
+                        <i class='bx bx-leaf' ></i>
+                        <h5>Ramah Lingkungan</h5>
+                        <p>Kurangi penggunaan kertas dan dampak lingkungan dengan memilih undangan digital. Solusi cerdas untuk acara yang lebih hijau.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end section 3 -->
+
+     <!-- section 4 -->
+     <div id="bantuan" class="text-center py-5 custom-bg-section-4">
+        <div class="container mx-auto">
+            <h2 class="fw-bold">Langkah Mudah Memesan Undangan</h2>
+            <p class="mb-5">Ikuti Langkah Mudah Untuk Mendapatkan Undangan Impian Anda.</p>
+            <div class="row align-items-center mx-auto">
+                <!-- Left Steps Section -->
+                <div class="col-md-4 text-start">
+                  <div class="step-box d-flex justify-content-center align-items-center mb-4">
+                    <div class="icon-box">
+                      <i class='bx bx-user-plus'></i>
+                    </div>
+                    <div class="step-text">
+                      <h5 class="fw-bold">Buat Akun</h5>
+                      <p>Anda dapat membuat akun pribadi atau akun perusahaan.</p>
+                    </div>
+                  </div>
+                  <div class="step-box d-flex justify-content-center align-items-center mb-4">
+                    <div class="icon-box">
+                      <i class='bx bx-calendar-event'></i>
+                    </div>
+                    <div class="step-text">
+                      <h5 class="fw-bold">Temukan Acaranya</h5>
+                      <p>Cari acara yang ingin Anda buat undangannya.</p>
+                    </div>
+                  </div>
+                  <div class="step-box d-flex justify-content-center align-items-center mb-4">
+                    <div class="icon-box">
+                      <i class='bx bx-list-ul'></i>
+                    </div>
+                    <div class="step-text">
+                      <h5 class="fw-bold">Pilih template desain</h5>
+                      <p>Pilih dari berbagai template yang tersedia.</p>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- Center Image Section -->
+                <div class="col-md-4 text-center center-image-section">
+                  <img src="asset/img/hand-mockup.png" alt="Phone" class="phone-img">
+                </div>
+              
+                <!-- Right Steps Section -->
+                <div class="col-md-4 text-start">
+                  <div class="step-box d-flex justify-content-center align-items-center mb-4">
+                    <div class="icon-box">
+                      <i class='bx bx-edit-alt'></i>
+                    </div>
+                    <div class="step-text">
+                      <h5 class="fw-bold">Sesuaikan teks</h5>
+                      <p>Edit teks sesuai kebutuhan Anda.</p>
+                    </div>
+                  </div>
+                  <div class="step-box d-flex justify-content-center align-items-center mb-4">
+                    <div class="icon-box">
+                      <i class='bx bx-credit-card'></i>
+                    </div>
+                    <div class="step-text">
+                      <h5 class="fw-bold">Bayar online</h5>
+                      <p>Lakukan pembayaran secara online untuk memproses pesanan.</p>
+                    </div>
+                  </div>
+                  <div class="step-box d-flex justify-content-center align-items-center mb-4">
+                    <div class="icon-box">
+                      <i class='bx bx-envelope'></i>
+                    </div>
+                    <div class="step-text">
+                      <h5 class="fw-bold">Undangan Anda sudah Tayang!</h5>
+                      <p>Undangan siap untuk dibagikan.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+      </div>
+     <!-- end section 4 -->
+
+     <!-- section 5 -->
+     <div id="tamplate" class="container my-5 pb-5">
+        <h2 class="text-center">Temukan Inspirasi dari Beragam Template Kami</h2>
+        <p class="text-center">Lihat preview template kami dan temukan desain yang paling cocok untuk kebutuhan Anda.</p>
+
+        <!-- Category Buttons -->
+        <div class="text-center title-kategori-tamplate mb-3">
+            <button id="all-btn" class="btn btn-pink">Semua</button>
+            <button id="pernikahan-btn" class="btn">Pernikahan</button>
+            <button id="khitan-btn" class="btn">Khitan</button>
+        </div>
+               
+
+        <!-- Template Cards -->
+        <div class="row col-12 col-md-12 mx-auto">
+            <div class="template-card col-6 col-md-3 mb-3" data-category="pernikahan">
+                <div class="card border-0">
+                    <div class="card-body p-0">
+                        <img src="asset/img/Frame 31.png" class="mb-2" width="100%" alt="">
+                        <span class="fw-bold">Bahtera Bahagia</span>
+                        <div class="mt-3 d-flex justify-content-between">
+                            <a href="" class="btn btn-pink btn-sm">Lihat Demo</a>
+                            <a href="" class="btn btn-pink btn-sm">Pesan</a>
                         </div>
-                        <div class="flex gap-3">
-                            <button class="border-coklat text-xs w-11/12 xl:w-4/5 lg:text-base py-2 rounded-lg text-coklat"><a href=""><i class="fa-solid fa-cart-shopping"></i> Lihat Tema</a></button>
+                    </div>
+                </div>
+            </div>
+            <div class="template-card col-6 col-md-3 mb-3" data-category="pernikahan">
+                <div class="card border-0">
+                    <div class="card-body p-0">
+                        <img src="asset/img/Frame 31.png" class="mb-2" width="100%" alt="">
+                        <span class="fw-bold">Bahtera Bahagia</span>
+                        <div class="mt-3 d-flex justify-content-between">
+                            <a href="" class="btn btn-pink btn-sm">Lihat Demo</a>
+                            <a href="" class="btn btn-pink btn-sm">Pesan</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="template-card col-6 col-md-3 mb-3" data-category="khitan">
+                <div class="card border-0">
+                    <div class="card-body p-0">
+                        <img src="asset/img/Frame 31.png" class="mb-2" width="100%" alt="">
+                        <span class="fw-bold">Bahtera Bahagia</span>
+                        <div class="mt-3 d-flex justify-content-between">
+                            <a href="" class="btn btn-pink btn-sm">Lihat Demo</a>
+                            <a href="" class="btn btn-pink btn-sm">Pesan</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="template-card col-6 col-md-3 mb-3" data-category="pernikahan">
+                <div class="card border-0">
+                    <div class="card-body p-0">
+                        <img src="asset/img/Frame 31.png" class="mb-2" width="100%" alt="">
+                        <span class="fw-bold">Bahtera Bahagia</span>
+                        <div class="mt-3 d-flex justify-content-between">
+                            <a href="" class="btn btn-pink btn-sm">Lihat Demo</a>
+                            <a href="" class="btn btn-pink btn-sm">Pesan</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="template-card col-6 col-md-3 mb-3" data-category="khitan">
+                <div class="card border-0">
+                    <div class="card-body p-0">
+                        <img src="asset/img/Frame 31.png" class="mb-2" width="100%" alt="">
+                        <span class="fw-bold">Bahtera Bahagia</span>
+                        <div class="mt-3 d-flex justify-content-between">
+                            <a href="" class="btn btn-pink btn-sm">Lihat Demo</a>
+                            <a href="" class="btn btn-pink btn-sm">Pesan</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="template-card col-6 col-md-3 mb-3" data-category="pernikahan">
+                <div class="card border-0">
+                    <div class="card-body p-0">
+                        <img src="asset/img/Frame 31.png" class="mb-2" width="100%" alt="">
+                        <span class="fw-bold">Bahtera Bahagia</span>
+                        <div class="mt-3 d-flex justify-content-between">
+                            <a href="" class="btn btn-pink btn-sm">Lihat Demo</a>
+                            <a href="" class="btn btn-pink btn-sm">Pesan</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="template-card col-6 col-md-3 mb-3" data-category="pernikahan">
+                <div class="card border-0">
+                    <div class="card-body p-0">
+                        <img src="asset/img/Frame 31.png" class="mb-2" width="100%" alt="">
+                        <span class="fw-bold">Bahtera Bahagia</span>
+                        <div class="mt-3 d-flex justify-content-between">
+                            <a href="" class="btn btn-pink btn-sm">Lihat Demo</a>
+                            <a href="" class="btn btn-pink btn-sm">Pesan</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="template-card col-6 col-md-3 mb-3" data-category="khitan">
+                <div class="card border-0">
+                    <div class="card-body p-0">
+                        <img src="asset/img/Frame 31.png" class="mb-2" width="100%" alt="">
+                        <span class="fw-bold">Bahtera Bahagia</span>
+                        <div class="mt-3 d-flex justify-content-between">
+                            <a href="" class="btn btn-pink btn-sm">Lihat Demo</a>
+                            <a href="" class="btn btn-pink btn-sm">Pesan</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- END SECTION 1 -->
+    </div>
+     <!-- end section 5 -->
 
-        <!-- SECTION 2 -->
-        <div class="w-full bg-semu-kuning">
-            <div class="w-4/5 mx-auto py-8 grid md:grid-cols-2 lg:grid-cols-4 text-center text-coklat lg:content-center lg:items-center lg:h-44">
-                <div class="w-4/5 mx-auto mb-8 lg:mb-0">
-                    <p class="font-semibold">Desain Mudah</p>
-                    <span class="text-sm">Sesuaikan desain undangan dengan tema acara Anda dengan cepat dan mudah.</span>
-                </div>
-                <div class="w-4/5 mx-auto mb-8 lg:mb-0">
-                    <p class="font-semibold">Akses Tanpa Batas</p>
-                    <span class="text-sm">Tamu dapat mengakses undangan dari perangkat apa pun, kapan saja.</span>
-                </div>
-                <div class="w-4/5 mx-auto mb-8 lg:mb-0">
-                    <p class="font-semibold">Pengelolaan Mudah</p>
-                    <span class="text-sm">Kelola semua undangan dan konfirmasi kehadiran dalam satu platform yang efisien.</span>
-                </div>
-                <div class="w-4/5 mx-auto mb-8 lg:mb-0">
-                    <p class="font-semibold">Pembaruan Instan</p>
-                    <span class="text-sm">Update undangan secara langsung dan beri tahu semua tamu tanpa perlu mencetak ulang.</span>
-                </div>
-            </div>
-        </div>
-        <!-- END SECTION 2 -->
+     <div class="floating-button">
+        <a href="mailto:contact@yourservice.com">
+            <img src="asset/img/cs.png" alt="Contact Us" />
+        </a>
+    </div>
 
-        <!-- SECTION 3 -->
-        <div class="w-full mb-8">
-            <div class="w-4/5 mx-auto">
-                <div class="flex flex-col xl:flex-row lg:py-24">
-                    <div class="w-full xl:w-1/2 pt-20 mb-16">
-                        <div class="w-4/5 mr-auto">
-                            <h3 class="font-semibold text-3xl mb-6">Keunggulan Undangan Digital untuk Acara Anda</h3>
-                            <span class="text-sm">Undangan digital memungkinkan Anda menyesuaikan desain dengan tema acara secara fleksibel dan mudah melakukan perubahan. Edit elemen desain dan kirim pembaruan instan, memastikan semua tamu mendapatkan informasi terbaru tanpa perlu mencetak ulang.</span>
-                            <button class="bg-coklat block mt-6 py-2 px-3 rounded-lg text-white"><a href=""><i class="fa-solid fa-cart-shopping"></i> Pesan Sekarang</a></button>
-                        </div>
-                    </div>
-                    <div class="w-full xl:w-1/2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 lg:grid-rows-2 gap-y-4">
-                        <div class="w-72 h-72 mx-auto bg-kuning-gold text-white p-6 rounded-3xl">
-                            <i class="fa-solid fa-clock-rotate-left text-4xl mb-3"></i>
-                            <p class="text-sm mb-4 font-semibold">Hemat Waktu</p>
-                            <span class="text-sm">Undangan digital memungkinkan Anda mengirimkan undangan ke banyak tamu dalam hitungan detik. Tidak perlu repot dengan pengiriman fisik.</span>
-                        </div>
-                        <div class="w-72 h-72 mx-auto bg-hitam-muda text-white p-6 rounded-3xl">
-                            <i class="fa-solid fa-money-bill-wave text-4xl mb-3"></i>
-                            <p class="text-sm mb-4 font-semibold">Biaya Terjangkau</p>
-                            <span class="text-sm">Kurangi biaya pengiriman dan cetak dengan undangan digital. Pilihan hemat untuk acara besar tanpa mengorbankan kualitas.</span>
-                        </div>
-                        <div class="w-72 h-72 mx-auto bg-hitam-muda text-white p-6 rounded-3xl">
-                            <i class="fa-solid fa-screwdriver-wrench text-4xl mb-3"></i>
-                            <p class="text-sm mb-4 font-semibold">Pengelolaan Sederhana</p>
-                            <span class="text-sm">Kelola daftar tamu, konfirmasi kehadiran, dan kirim pengingat secara otomatis. Semua dalam satu platform yang mudah digunakan.</span>
-                        </div>
-                        <div class="w-72 h-72 mx-auto bg-hitam-muda text-white p-6 rounded-3xl">
-                            <i class="fa-solid fa-leaf text-4xl mb-3"></i>
-                            <p class="text-sm mb-4 font-semibold">Ramah Lingkungan</p>
-                            <span class="text-sm">Kurangi penggunaan kertas dan dampak lingkungan dengan memilih undangan digital. Solusi cerdas untuk acara yang lebih hijau.</span>
-                        </div>
-                    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-">
+                    <h5 class="text-white">Hadir</h5>
+                    <p class="text-white">Hadirkan inovasi dalam cara Anda mengundang. platform kreatif untuk membuat undangan digital yang memukau!.</p>
                 </div>
-            </div>
-        </div>
-        <!-- END SECTION 3 -->
-
-        <!-- SECTION 4 -->
-         <div class="w-full bg-semu-kuning-v2 py-12">
-            <h3 class="text-center font-bold text-2xl mb-2">Langkah Mudah Memesan Undangan</h3>
-            <p class="text-center font-medium text-base mb-8">Ikuti langkah mudah untuk mendapatkan undangan impian Anda.</p>
-            <div class="w-full lg:w-4/5 lg:mx-auto flex flex-col lg:flex-row">
-                <div class="w-11/12 mx-auto lg:w-1/3">
-                    <ul>
-                        <li class="flex gap-3 mb-3 py-5 border-b-coklat items-center">
-                            <div class="w-11 h-9 lg:w-16 lg:h-12 flex items-center justify-center rounded-full bg-coklat text-white"><i class="fa-solid fa-1"></i></div>
-                            <div class="flex flex-col">
-                                <p class="font-semibold">Buat Akun</p>
-                                <p class="font-normal">Anda dapat membuat akun pribadi atau akun perusahaan</p>
-                            </div>
-                        </li>
-                        <li class="flex gap-3 mb-3 py-5 border-b-coklat items-center">
-                            <div class="w-11 h-9 lg:w-16 lg:h-12 flex items-center justify-center rounded-full border-coklat text-coklat"><i class="fa-solid fa-2"></i></div>
-                            <div class="flex flex-col">
-                                <p class="font-semibold">Buat Akun</p>
-                                <p class="font-normal">Anda dapat membuat akun pribadi atau akun perusahaan</p>
-                            </div>
-                        </li>
-                        <li class="flex gap-3 mb-3 py-5 border-b-coklat items-center">
-                            <div class="w-11 h-9 lg:w-16 lg:h-12 flex items-center justify-center rounded-full border-coklat text-coklat"><i class="fa-solid fa-3"></i></div>
-                            <div class="flex flex-col">
-                                <p class="font-semibold">Buat Akun</p>
-                                <p class="font-normal">Anda dapat membuat akun pribadi atau akun perusahaan</p>
-                            </div>
-                        </li>
-                        <li class="flex gap-3 mb-3 py-5 border-b-coklat items-center">
-                            <div class="w-11 h-9 lg:w-16 lg:h-12 flex items-center justify-center rounded-full border-coklat text-coklat"><i class="fa-solid fa-4"></i></div>
-                            <div class="flex flex-col">
-                                <p class="font-semibold">Buat Akun</p>
-                                <p class="font-normal">Anda dapat membuat akun pribadi atau akun perusahaan</p>
-                            </div>
-                        </li>
-                        <li class="flex gap-3 mb-3 py-5 border-b-coklat items-center">
-                            <div class="w-11 h-9 lg:w-16 lg:h-12 flex items-center justify-center rounded-full border-coklat text-coklat"><i class="fa-solid fa-5"></i></div>
-                            <div class="flex flex-col">
-                                <p class="font-semibold">Buat Akun</p>
-                                <p class="font-normal">Anda dapat membuat akun pribadi atau akun perusahaan</p>
-                            </div>
-                        </li>
-                        <li class="flex gap-3 mb-3 py-5 border-b-coklat items-center">
-                            <div class="w-11 h-9 lg:w-16 lg:h-12 flex items-center justify-center rounded-full border-coklat text-coklat"><i class="fa-solid fa-6"></i></div>
-                            <div class="flex flex-col">
-                                <p class="font-semibold">Buat Akun</p>
-                                <p class="font-normal">Anda dapat membuat akun pribadi atau akun perusahaan</p>
-                            </div>
-                        </li>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="text-white">Navigasi</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#home">Beranda</a></li>
+                        <li><a href="#keunggulan">Keunggulan</a></li>
+                        <li><a href="#bantuan">bantuan</a></li>
+                        <li><a href="#tamplate">tamplate</a></li>
+                        <li><a href="#tamplate">Masuk/Daftar</a></li>
                     </ul>
                 </div>
-                <div class="w-full lg:w-2/3 p-5 lg:mx-auto">
-                    <div class="h-screen bg-slate-200 rounded-2xl"></div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="text-white">Contact Us</h5>
+                    <p class="text-white">Email: info@hugostudio.id</p>
+                    <p class="text-white">Phone: 0851-8303-8794</p>
+                    <!-- <div>
+                        <a href="#" class="mr-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="mr-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="mr-2"><i class="fab fa-instagram"></i></a>
+                    </div> -->
                 </div>
             </div>
-         </div>
-        <!-- END SECTION 4 -->
-
-        <!-- SECTION 5 -->
-        <div class="w-full">
-            <div class="w-4/5 mx-auto text-center my-24 lg:py-24">
-                <h3 class="font-semibold text-2xl mb-3">Temukan Inspirasi dari Beragam Template Kami</h3>
-                <p>Lihat preview template kami dan temukan desain yang paling cocok untuk kebutuhan Anda.</p>
-                <div class="mt-10 flex gap-3 justify-center">
-                    <span class="active-menu pb-2 px-3">Pernikahan</span>
-                    <span class="pb-2 px-3">Kedukaan</span>
-                    <span class="pb-2 px-3">Acara Lainnya</span>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-12">
-                    <div class="sm:w-56  lg:w-64 xl:w-96 mx-auto m-5">
-                        <img src="asset/img/Frame 31.png" class="mb-4" alt="">
-                    </div>
-                    <div class="sm:w-56  lg:w-64 xl:w-96 mx-auto m-5">
-                        <img src="asset/img/Frame 31.png" class="mb-4" alt="">
-                    </div>
-                    <div class="sm:w-56  lg:w-64 xl:w-96 mx-auto m-5">
-                        <img src="asset/img/Frame 31.png" class="mb-4" alt="">
-                    </div>
-                    <div class="sm:w-56  lg:w-64 xl:w-96 mx-auto m-5">
-                        <img src="asset/img/Frame 31.png" class="mb-4" alt="">
-                    </div>
-                    <div class="sm:w-56  lg:w-64 xl:w-96 mx-auto m-5">
-                        <img src="asset/img/Frame 31.png" class="mb-4" alt="">
-                    </div>
-                    <div class="sm:w-56  lg:w-64 xl:w-96 mx-auto m-5">
-                        <img src="asset/img/Frame 31.png" class="mb-4" alt="">
-                    </div>
-                </div>
-                <button class="bg-coklat px-5 py-3 text-white font-medium rounded-xl"><a href="">Mulai Pemesanan Undangan</a></button>
+            <div class="text-center mt-4">
+                <p class="text-white">&copy; 2024 Hugo Studio. All rights reserved.</p>
             </div>
-        </div>
-        <!-- END SECTION 5 -->
-    </main>
-    <!-- END CONTENT -->
-
-    <!-- FOOTER -->
-    <footer class="w-full bg-coklat p-6">
-        <div class="w-4/5 mx-auto flex flex-col gap-10 lg:flex-row lg:justify-between items-center mb-8">
-            <ul class="flex gap-4 text-white font-semibold">
-                <li><a href="">Home</a></li>
-                <li><a href="">Tema</a></li>
-                <li><a href="">Paket</a></li>
-            </ul>
-            <img src="asset/img/dummy-footer.png" class="w-40" alt="">
-            <ul class="flex gap-4">
-                <li class="w-10 h-10 lg:w-14 lg:h-14 rounded-full bg-white flex justify-center items-center"><a  href=""><i class="fa-brands fa-instagram text-2xl text-coklat"></i></a></li>
-                <li class="w-10 h-10 lg:w-14 lg:h-14 rounded-full bg-white flex justify-center items-center"><a  href=""><i class="fa-brands fa-x-twitter text-2xl text-coklat"></i></a></li>
-                <li class="w-10 h-10 lg:w-14 lg:h-14 rounded-full bg-white flex justify-center items-center"><a  href=""><i class="fa-brands fa-facebook text-2xl text-coklat"></i></a></li>
-            </ul>
-        </div>
-        <div class="w-full border-t-2 border-t-white p-6 text-center text-white">
-            <p>Copyright © 2024 Logo | Powered by Vibrant Ecosystem</p>
         </div>
     </footer>
-    <!-- FOOTER -->
-</body>
+      
+     <script src="asset/js/script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
 </html>
