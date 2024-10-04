@@ -1,45 +1,298 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-:root{
-    --bg-coklat: #8B4513;
-    --bg-semu-kuning: #FFE799;
-    --bg-semu-kuning-v2: #FAF3E0;
-    --bg-kuning-gold: #C29C20;
-    --bg-hitam-muda: #60605F;
 
+html{
+    scroll-behavior: smooth;
 }
 
-.poppins{
+body{
     font-family: "Poppins", sans-serif;
-    font-style: normal;
+    font-size: 14px;
 }
 
-.bg-coklat{
-    background-color: var(--bg-coklat);
-}
-.bg-semu-kuning{
-    background-color: var(--bg-semu-kuning);
-}
-.bg-semu-kuning-v2{
-    background-color: var(--bg-semu-kuning-v2);
-}
-.bg-kuning-gold{
-    background-color: var(--bg-kuning-gold);
-}
-.bg-hitam-muda{
-    background-color: var(--bg-hitam-muda);
-}
-.active-menu{
-    border-bottom: 4px solid var(--bg-coklat);
+/* costum button bootstrap */
+.btn-pink{
+    background-color: #F72585;
+    color: white;
 }
 
-.border-b-coklat{
-    border-bottom: 1px solid rgba(139, 69, 19, 0.5);
+.btn-outline-pink{
+    border: 1px solid #F72585;
+    color: white;
 }
 
-.text-coklat{
-    color: var(--bg-coklat);
+.btn-outline-pink:hover{
+    background-color: #F72585;
+    color: white;
 }
 
-.border-coklat{
-    border: 3px solid var(--bg-coklat);
+.navbar {
+    z-index: 999999; /* Angka lebih besar untuk menempatkan navbar di atas */
 }
+
+.hero {
+    padding-top: 100px !important; /* Atur sesuai dengan tinggi navbar */
+}
+
+
+
+/* Bottom navbar for mobile */
+.mobile-bottom-nav {
+    display: none;
+  }
+
+.auth a{
+    font-size: 14px;
+}
+  
+  @media (max-width: 768px) {
+    /* Navbar settings for mobile */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 999999;
+    }
+  
+    .navbar-brand {
+      display: block;
+    }
+  
+    /* Hide desktop menu */
+    .navbar-collapse {
+      display: none;
+    }
+  
+    /* Bottom menu for mobile */
+    .mobile-bottom-nav {
+      display: block;
+      position: fixed;
+      bottom: 0;
+      background-color: white;
+      width: 100%;
+      z-index: 1000;
+    }
+  
+    .bottom-nav {
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0;
+    }
+  
+    .bottom-nav li {
+      list-style: none;
+    }
+  
+    .bottom-nav a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: black;
+        text-decoration: none;
+      }
+      
+      .bottom-nav i {
+        font-size: 24px;
+      }
+      
+      .bottom-nav span {
+        font-size: 12px;
+      }
+      
+  
+    .navbar-toggler {
+      display: none;
+    }
+  }
+
+
+
+  /* section 2 */
+  .features-section {
+    background-color: #f9e6b0;
+}
+
+.feature-box {
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+.feature-box i {
+    font-size: 2rem;
+    color: #E25F00;
+}
+
+.feature-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #3A1800;
+}
+
+.feature-title:after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #D60000;
+    margin: 8px auto 0;
+    border-radius: 20px;
+}
+
+.feature-description {
+    color: #5e2b08;
+    font-size: 14px;
+    flex-grow: 1;
+}
+
+  /* end section 2 */
+
+  
+/* section 3 */
+
+.info-box {
+    background-color: #6c757d;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    height: 100%;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.info-box i{
+    font-size: 2rem;
+}
+
+.info-box:hover{
+    background-color: #F72585;
+    transform: rotate(-5deg);
+}
+
+/* end section 3 */
+
+
+/* section 4 */
+.custom-bg-section-4 {
+    position: relative;
+    z-index: 1;
+    background-color: #FCE7A1;
+}
+
+.custom-bg-section-4::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../img/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.1; /* Adjust opacity here */
+    z-index: -1; /* Send background behind the content */
+}
+
+.icon-box {
+    background-color: #6d3f21;
+    border-radius: 50%;
+    width: 60px; /* Fixed width */
+    height: 60px; /* Fixed height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-shrink: 0; /* Prevent icon from shrinking */
+}
+
+.icon-box i {
+    font-size: 28px; /* Consistent icon size */
+    line-height: 1; /* Ensure that line height doesn't affect icon size */
+}
+
+.step-text {
+    margin-left: 15px;
+    min-height: 80px; /* Ensure consistent height */
+    max-width: 200px; /* Limit the width of text */
+}
+
+.phone-img {
+    max-width: 100%;
+}
+
+.step-box {
+    display: flex;
+    align-items: flex-start; /* Ensure icons and text are aligned */
+    gap: 15px; /* Space between icon and text */
+    margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+    .center-image-section {
+      order: -1; /* Memindahkan gambar ke urutan teratas */
+    }
+  }
+
+/* end section 4 */
+
+/* section 5 */
+
+.template-card {
+    opacity: 1;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: scale(1);
+}
+
+.template-card.fade-out {
+    opacity: 0;
+    transform: scale(0.95); /* Mengecilkan saat fade-out */
+    pointer-events: none; /* Menghindari interaksi */
+}
+/* end section 5 */
+
+
+/* costumer service */
+.floating-button {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    animation: bounce 1s infinite; /* animasi bounce */
+    z-index: 9999999999999;
+}
+
+.floating-button a {
+    display: block;
+}
+
+.floating-button img {
+    width: 100px; /* sesuaikan ukuran gambar */
+    height: auto; /* mempertahankan rasio gambar */
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0); /* posisi awal */
+    }
+    40% {
+        transform: translateY(-10px); /* bergerak ke atas */
+    }
+    60% {
+        transform: translateY(-5px); /* sedikit turun */
+    }
+}
+
+
+/* footer */
+.footer {
+    background-color: #5e2b08;
+    padding: 20px 0;
+}
+.footer a {
+    color: white;
+}
+.footer a:hover {
+    color: #007bff;
+}  
