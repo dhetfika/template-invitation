@@ -1,10 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arizonia&family=Cormorant+Infant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Italianno&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 :root {
     --color-c1: #8CACFF;
     --color-c2: #FCBA1C;
     --color-c3: #274161;
-    --color-c4: #799df7;
+    --color-c4: #81a1f3;
+    --color-c5: #0E303B;
+
 }
 
 .nunito{
@@ -15,6 +17,15 @@
   font-family: "Italianno", system-ui;
   font-weight: 400;
   font-style: normal;
+}
+
+.cormorant-infant {
+  font-family: "Cormorant Infant", serif;
+}
+
+.arizonia {
+  font-family: "Arizonia", cursive;
+  font-weight: 400;
 }
 
 .bg-color-c1 {
@@ -31,4 +42,8 @@
 
 .border-kuning{
     border-color: var(--color-c2);
+}
+
+.text-c5{
+    color: var(--color-c5);
 }
