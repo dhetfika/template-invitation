@@ -98,3 +98,62 @@ li{
 }
 
 
+/* jadwal-content */
+.countdown-box {
+    background-color: #f88a85;
+    border-radius: 15px;
+}
+
+.countdown-box h4, .countdown-box p {
+    color: #fff;
+    margin: 0;
+}
+
+.jadwal-content h3{
+    font-family: "Great Vibes", cursive;
+    font-size: 2.5rem;
+}
+
+.jadwal-content p.nama-lokasi{
+    color: #F95D59;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+
+/* lokasi-content */
+
+.lokasi-content img{
+    border-radius: 10px
+}
+
+.lokasi-content a{
+    background-color: #F95D59;
+    cursor: pointer;
+    color: white;
+}
+
+
+/* rsvp-content */
+
+.rsvp-content img{
+    border-radius: 10px
+}
+
+.rsvp-content a{
+    background-color: #F95D59;
+    cursor: pointer;
+    color: white;
+}
+
+
+/* penutup-content */
+
+.penutup-content h3{
+    font-family: "Great Vibes", cursive;
+    font-size: 2.5rem;
+}
+
+
+
+
