@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tangerine:wght@400;700&display=swap');
+
+body{
+    background-color: #387286;
+    color: white;
+    font-family: "Poppins", serif;
+    overflow: auto;
+    scroll-behavior: smooth;
+    font-size: 12px;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style-type: none;
+}
+
+.modal-content {
+    background-color: transparent;
+    border: none;
+}
+
+.invitation {
+    height: 100vh;
+    position: relative;
+    background: linear-gradient(to bottom, #015075 50%, white 50%);
+    overflow: hidden;
+}
+
+.cover {
+    height: 100vh;
+    position: relative;
+    background-color: #173A47;
+    overflow: hidden;
+}
+
+  
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center, transparent 30%, rgba(0, 0, 0, 0.4) 70%);
+    z-index: 1;
+}
+
+.cover .item-image-1{
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 80%;
+    z-index: 5;
+}
+
+
+.cover .item-image-2 {
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    width: 80%;
+    z-index: 5;  
+}
+
+
+/* cover content */
+
+.cover-content{
+    z-index: 99;
+}
+
+.cover-content p{
+    font-size: 8px;
+}
+
+.cover-content h3{
+    font-family: "Poppins", serif;
+    font-size: 1.5rem;
+}
+
+.cover-content p.kategori{
+    font-family: "Tangerine", serif;
+    font-size: 1rem;
+}
+
+.cover-content img{
+    width: 90px;
+}
+
+.cover-content p.nama-tamu{
+    font-weight: 500;
+    font-size: .8rem;
+}
+
+.cover-content a{
+    background-color: #A30000;
+    cursor: pointer;
+    color: white;
+    font-size: 12px;
+}
+
+
+/* salam-content */
+
+/* .salam-content img.bakcground-salam{
+    width: 100%;
+} */
+
+.salam-content img{
+    border-radius: 10px
+}
+
+
+/* jadwal-content */
+.countdown-box {
+    background-color: #f88a85;
+    border-radius: 15px;
+}
+
+.countdown-box h4, .countdown-box p {
+    color: #fff;
+    margin: 0;
+}
+
+.jadwal-content h3{
+    font-family: "Great Vibes", cursive;
+    font-size: 2.5rem;
+}
+
+.jadwal-content p.nama-lokasi{
+    color: #F95D59;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+
+/* lokasi-content */
+
+.lokasi-content img{
+    border-radius: 10px
+}
+
+.lokasi-content a{
+    background-color: #F95D59;
+    cursor: pointer;
+    color: white;
+}
+
+
+/* rsvp-content */
+
+.rsvp-content img{
+    border-radius: 10px
+}
+
+.rsvp-content a{
+    background-color: #F95D59;
+    cursor: pointer;
+    color: white;
+}
+
+
+/* penutup-content */
+
+.penutup-content h3{
+    font-family: "Great Vibes", cursive;
+    font-size: 2.5rem;
+}
+
+
+
+
